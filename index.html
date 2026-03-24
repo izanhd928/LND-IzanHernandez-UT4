@@ -87,16 +87,51 @@
 
         /* --- ESTILO PARA UNIFICAR IMÁGENES DEL CARRUSEL --- */
         .img-carrusel {
-            height: 500px; /* Altura para pantallas grandes */
+            height: 500px; 
             object-fit: cover;
             width: 100%;
         }
 
-        /* Ajuste de altura del carrusel para móviles */
         @media (max-width: 768px) {
             .img-carrusel {
                 height: 300px;
             }
+        }
+
+        /* --- ESTILOS PARA LA TABLA DE HORARIOS ADAPTADOS AL DISEÑO (AMARILLO) --- */
+        #horarios {
+            background-color: var(--color-secundario); 
+            border-top: 5px solid #ffc107; /* Amarillo de Bootstrap */
+            border-bottom: 5px solid #ffc107;
+        }
+
+        .tabla-planning {
+            width: 100%;
+            border-collapse: collapse;
+            color: var(--color-texto);
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .tabla-planning th, .tabla-planning td {
+            /* Borde amarillo semi-transparente */
+            border: 1px solid rgba(255, 193, 7, 0.4); 
+            padding: 12px 5px;
+            vertical-align: middle;
+        }
+
+        .tabla-planning th {
+            background-color: #ffc107; /* Cabecera amarilla */
+            color: var(--color-fondo); /* Texto oscuro para que contraste bien con el amarillo */
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .tabla-planning td:first-child {
+            color: #ffc107; /* Horas en color amarillo */
+            background-color: rgba(34, 40, 49, 0.6); 
         }
     </style>
 </head>
@@ -247,6 +282,58 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios" class="py-5">
+        <div class="container-fluid px-lg-5">
+            <h2 class="text-center mb-5 text-white display-4 fuente-titulos">PLANNING SEMANAL</h2>
+            
+            <div class="table-responsive shadow-lg">
+                <table class="tabla-planning">
+                    <thead>
+                        <tr>
+                            <th>HORA</th>
+                            <th>LUNES</th>
+                            <th>MARTES</th>
+                            <th>MIÉRCOLES</th>
+                            <th>JUEVES</th>
+                            <th>VIERNES</th>
+                            <th>SÁBADO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09:00</td>
+                            <td>SPINNING</td><td>CROSS TRAINING</td><td>YOGA</td><td>SPINNING</td><td>CROSS TRAINING</td><td>BODY PUMP</td>
+                        </tr>
+                        <tr>
+                            <td>10:00</td>
+                            <td>PILATES</td><td>GAP</td><td>PILATES</td><td>GAP</td><td>ZUMBA</td><td>SPINNING</td>
+                        </tr>
+                        <tr>
+                            <td>11:00</td>
+                            <td>BODY PUMP</td><td>TRX</td><td>BODY PUMP</td><td>TRX</td><td>YOGA</td><td>PILATES</td>
+                        </tr>
+                        <tr>
+                            <td>14:00</td>
+                            <td>CROSS TRAINING</td><td></td><td>CROSS TRAINING</td><td></td><td>CROSS TRAINING</td><td></td>
+                        </tr>
+                        <tr>
+                            <td>18:00</td>
+                            <td>BOXEO</td><td>SPINNING</td><td>BOXEO</td><td>SPINNING</td><td>BODY PUMP</td><td></td>
+                        </tr>
+                        <tr>
+                            <td>19:00</td>
+                            <td>BODY PUMP</td><td>CROSS TRAINING</td><td>BODY PUMP</td><td>CROSS TRAINING</td><td>ZUMBA</td><td></td>
+                        </tr>
+                        <tr>
+                            <td>20:00</td>
+                            <td>GAP</td><td>PILATES</td><td>TRX</td><td>PILATES</td><td>YOGA</td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
