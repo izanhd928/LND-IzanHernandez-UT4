@@ -101,7 +101,7 @@
         /* --- ESTILOS PARA LA TABLA DE HORARIOS ADAPTADOS AL DISEÑO (AMARILLO) --- */
         #horarios {
             background-color: var(--color-secundario); 
-            border-top: 5px solid #ffc107; /* Amarillo de Bootstrap */
+            border-top: 5px solid #ffc107; 
             border-bottom: 5px solid #ffc107;
         }
 
@@ -115,22 +115,21 @@
         }
 
         .tabla-planning th, .tabla-planning td {
-            /* Borde amarillo semi-transparente */
             border: 1px solid rgba(255, 193, 7, 0.4); 
             padding: 12px 5px;
             vertical-align: middle;
         }
 
         .tabla-planning th {
-            background-color: #ffc107; /* Cabecera amarilla */
-            color: var(--color-fondo); /* Texto oscuro para que contraste bien con el amarillo */
+            background-color: #ffc107; 
+            color: var(--color-fondo); 
             font-family: 'Oswald', sans-serif;
             font-size: 1.1rem;
             letter-spacing: 1px;
         }
 
         .tabla-planning td:first-child {
-            color: #ffc107; /* Horas en color amarillo */
+            color: #ffc107; 
             background-color: rgba(34, 40, 49, 0.6); 
         }
     </style>
@@ -334,6 +333,44 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fuente-titulos">DÓNDE ESTAMOS</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h3 class="text-warning mb-3">IronForge Gran Canaria</h3>
+                    <p class="lead" style="font-size: 1.1rem;">
+                        Nuestras instalaciones principales se encuentran en el corazón de Las Palmas. Un espacio de más de 2.000m² equipado con la última tecnología fitness para ayudarte a sacar tu máximo potencial.
+                    </p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3">
+                            <i class="fa-solid fa-location-dot text-warning me-2 fs-5"></i>
+                            Calle León y Castillo, 150<br>
+                            <span class="ms-4">35004 Las Palmas de Gran Canaria</span>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-phone text-warning me-2 fs-5"></i>
+                            +34 928 12 34 56
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-envelope text-warning me-2 fs-5"></i>
+                            info@ironforge.es
+                        </li>
+                        <li class="mb-3">
+                            <i class="fa-solid fa-clock text-warning me-2 fs-5"></i>
+                            <strong>Acceso Socios:</strong> Abierto 24 horas.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <div class="shadow-lg rounded overflow-hidden border border-warning border-opacity-50">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112284.47167732235!2d-15.540449528734268!3d28.11727786638059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40950e641551a1%3A0x7d2dc2e9c1c6543b!2sLas%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1716301234567!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
