@@ -132,13 +132,27 @@
             color: #ffc107; 
             background-color: rgba(34, 40, 49, 0.6); 
         }
+
+        /* --- ESTILO PARA EL BOTÓN DEL FORMULARIO (EFECTO HOVER BLANCO) --- */
+        .btn-enviar {
+            background-color: #ffc107;
+            color: #212529; /* Texto oscuro */
+            border: 2px solid #ffc107; /* Borde amarillo */
+            transition: all 0.3s ease; /* Transición suave */
+        }
+
+        .btn-enviar:hover {
+            background-color: #ffffff; /* Se pone blanco al pasar el ratón */
+            color: #212529; /* Mantiene el texto oscuro */
+            border: 2px solid #ffc107; /* Mantiene el borde amarillo para que se vea sobre el fondo blanco */
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark" id="menu-principal">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="menu-principal">
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand-logo">
                     <i class="fa-solid fa-dumbbell"></i>
@@ -288,7 +302,6 @@
     <section id="horarios" class="py-5">
         <div class="container-fluid px-lg-5">
             <h2 class="text-center mb-5 text-white display-4 fuente-titulos">PLANNING SEMANAL</h2>
-            
             <div class="table-responsive shadow-lg">
                 <table class="tabla-planning">
                     <thead>
@@ -368,7 +381,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="shadow-lg rounded overflow-hidden border border-warning border-opacity-50">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112284.47167732235!2d-15.540449528734268!3d28.11727786638059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40950e641551a1%3A0x7d2dc2e9c1c6543b!2sLas%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas!5e0!3m2!1ses!2ses!4v1716301234567!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14068.749003893322!2d-15.43859664551101!3d28.126343516547144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA3JzM0LjgiTiAxNcKwMjUnNTEuMiJX!5e0!3m2!1ses!2ses!4v1689255012345!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -416,6 +429,56 @@
                                     ¡Para nada! Nuestros entrenadores adaptan los ejercicios a tu nivel actual. Todo el mundo es bienvenido.
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark display-4 fuente-titulos">CONTÁCTANOS</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <p class="text-center mb-4 text-secondary">¿Tienes alguna duda o quieres apuntarte? Rellena el formulario y te responderemos en menos de 24 horas.</p>
+                            
+                            <form>
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control border-warning" id="nombreInput" placeholder="Tu Nombre" required>
+                                            <label for="nombreInput" class="text-secondary">Tu Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control border-warning" id="emailInput" placeholder="Tu Email" required>
+                                            <label for="emailInput" class="text-secondary">Correo Electrónico</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <select class="form-select border-warning" id="asuntoSelect" aria-label="Asunto" required>
+                                        <option selected disabled value="">Selecciona un motivo...</option>
+                                        <option value="1">Información de tarifas</option>
+                                        <option value="2">Dudas sobre las clases o el planning</option>
+                                        <option value="3">Sugerencias u otros</option>
+                                    </select>
+                                    <label for="asuntoSelect" class="text-secondary">Asunto</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <textarea class="form-control border-warning" placeholder="Escribe tu mensaje aquí" id="mensajeArea" style="height: 150px" required></textarea>
+                                    <label for="mensajeArea" class="text-secondary">Tu Mensaje</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-lg fw-bold btn-enviar" type="submit">
+                                        Enviar Mensaje <i class="fa-solid fa-paper-plane ms-2"></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
