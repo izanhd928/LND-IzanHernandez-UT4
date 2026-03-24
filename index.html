@@ -151,6 +151,27 @@
             border-radius: 4px;
         }
 
+        /* --- ESTILOS TARJETAS DE PRECIOS --- */
+        .pricing-card {
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card-destacada {
+            border: 2px solid #ffc107;
+            transform: scale(1.05); /* Hace la tarjeta central un poco más grande */
+            z-index: 1;
+        }
+
+        @media (max-width: 991px) {
+            .pricing-card-destacada {
+                transform: scale(1); /* En móviles anula el aumento para que no se salga */
+            }
+        }
+
         /* --- BOTÓN FORMULARIO --- */
         .btn-enviar {
             background-color: #ffc107;
@@ -178,19 +199,19 @@
             text-align: center;
             font-size: 35px;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000; /* Asegura que siempre esté por encima de todo */
+            z-index: 1000;
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .whatsapp-flotante:hover {
-            background-color: #128C7E; /* Verde un poco más oscuro al pasar el ratón */
+            background-color: #128C7E; 
             color: #FFF;
-            transform: scale(1.1); /* Efecto de aumento */
+            transform: scale(1.1); 
         }
 
         .whatsapp-flotante i {
-            margin-top: 13px; /* Centra el icono dentro del círculo */
+            margin-top: 13px; 
         }
     </style>
 </head>
@@ -212,6 +233,7 @@
                         <li class="nav-item"><a class="nav-link" href="#sobre-nosotros"><i class="fa-solid fa-house nav-icono"></i>Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#servicios"><i class="fa-solid fa-fire nav-icono"></i>Instalaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="#horarios"><i class="fa-solid fa-users nav-icono"></i>Clases</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tarifas"><i class="fa-solid fa-tag nav-icono"></i>Tarifas</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contacto"><i class="fa-solid fa-envelope nav-icono"></i>Contacto</a></li>
                     </ul>
                 </div>
@@ -428,6 +450,63 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifas" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 text-dark display-4 fuente-titulos">NUESTRAS TARIFAS</h2>
+            <div class="row g-4 justify-content-center align-items-center">
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow-sm pricing-card rounded-4 border-0">
+                        <div class="card-body p-5">
+                            <h4 class="card-title text-secondary mb-3 fw-bold">PASE DE DÍA</h4>
+                            <h2 class="display-4 fw-bold text-dark mb-4">10€</h2>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Acceso 24h un día</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Musculación y Cardio</li>
+                                <li class="mb-2 text-muted"><i class="fa-solid fa-xmark me-2"></i>Sin acceso a clases dirigidas</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-outline-dark w-100 fw-bold btn-lg">Elegir Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow-lg pricing-card pricing-card-destacada rounded-4 position-relative" style="background-color: var(--color-secundario);">
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill text-uppercase shadow">Más Popular</span>
+                        </div>
+                        <div class="card-body p-5 text-white">
+                            <h4 class="card-title text-warning mb-3 fw-bold">CUOTA MENSUAL</h4>
+                            <h2 class="display-4 fw-bold text-white mb-4">28€<span class="fs-6 text-secondary fw-normal">/mes</span></h2>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Acceso 24/7 (Llave inteligente)</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Todas las clases del Planning</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Rutina inicial personalizada</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-warning w-100 fw-bold text-dark btn-lg">Elegir Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow-sm pricing-card rounded-4 border-0">
+                        <div class="card-body p-5">
+                            <h4 class="card-title text-secondary mb-3 fw-bold">PLAN VIP ANUAL</h4>
+                            <h2 class="display-4 fw-bold text-dark mb-4">375€<span class="fs-6 text-secondary fw-normal">/año</span></h2>
+                            <ul class="list-unstyled mb-4 text-start">
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Todo lo del plan mensual</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>1 sesión Entrenador Personal/mes</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-warning me-2"></i>Pack merchandising bienvenida</li>
+                            </ul>
+                            <a href="#contacto" class="btn btn-outline-dark w-100 fw-bold btn-lg">Elegir Plan</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
