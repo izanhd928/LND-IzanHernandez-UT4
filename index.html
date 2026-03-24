@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* --- VARIABLES DE COLOR */
+        /* --- VARIABLES DE COLOR --- */
         :root {
             --color-fondo: #222831;
             --color-secundario: #393E46;
@@ -78,14 +78,13 @@
             color: var(--color-acento) !important;
         }
 
-        /* --- ESTILO PARA UNIFICAR IMÁGENES DE SERVICIOS PREMIUM --- */
+        /* --- IMÁGENES PREMIUM Y CARRUSEL --- */
         .img-premium {
             height: 200px;
             object-fit: cover;
             width: 100%;
         }
 
-        /* --- ESTILO PARA UNIFICAR IMÁGENES DEL CARRUSEL --- */
         .img-carrusel {
             height: 500px; 
             object-fit: cover;
@@ -98,7 +97,7 @@
             }
         }
 
-        /* --- ESTILOS PARA LA TABLA DE HORARIOS ADAPTADOS AL DISEÑO (AMARILLO) --- */
+        /* --- TABLA DE HORARIOS --- */
         #horarios {
             background-color: var(--color-secundario); 
             border-top: 5px solid #ffc107; 
@@ -133,18 +132,32 @@
             background-color: rgba(34, 40, 49, 0.6); 
         }
 
-        /* --- ESTILO PARA EL BOTÓN DEL FORMULARIO (EFECTO HOVER BLANCO) --- */
+        /* --- EFECTO INTERACTIVO PARA LAS CELDAS DEL PLANNING --- */
+        .celda-interactiva {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .celda-interactiva:hover {
+            background-color: #ffc107 !important;
+            color: #212529 !important;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            border-radius: 4px;
+        }
+
+        /* --- BOTÓN FORMULARIO --- */
         .btn-enviar {
             background-color: #ffc107;
-            color: #212529; /* Texto oscuro */
-            border: 2px solid #ffc107; /* Borde amarillo */
-            transition: all 0.3s ease; /* Transición suave */
+            color: #212529;
+            border: 2px solid #ffc107;
+            transition: all 0.3s ease;
         }
 
         .btn-enviar:hover {
-            background-color: #ffffff; /* Se pone blanco al pasar el ratón */
-            color: #212529; /* Mantiene el texto oscuro */
-            border: 2px solid #ffc107; /* Mantiene el borde amarillo para que se vea sobre el fondo blanco */
+            background-color: #ffffff;
+            color: #212529;
+            border: 2px solid #ffc107;
         }
     </style>
 </head>
@@ -302,7 +315,8 @@
     <section id="horarios" class="py-5">
         <div class="container-fluid px-lg-5">
             <h2 class="text-center mb-5 text-white display-4 fuente-titulos">PLANNING SEMANAL</h2>
-            <div class="table-responsive shadow-lg">
+            <p class="text-center text-warning mb-4"><i class="fa-solid fa-hand-pointer me-2"></i>Haz clic en cualquier clase para ver los detalles</p>
+            <div class="table-responsive shadow-lg pb-3">
                 <table class="tabla-planning">
                     <thead>
                         <tr>
@@ -318,31 +332,66 @@
                     <tbody>
                         <tr>
                             <td>09:00</td>
-                            <td>SPINNING</td><td>CROSS TRAINING</td><td>YOGA</td><td>SPINNING</td><td>CROSS TRAINING</td><td>BODY PUMP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalSpinning">SPINNING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalYoga">YOGA</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalSpinning">SPINNING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
                         </tr>
                         <tr>
                             <td>10:00</td>
-                            <td>PILATES</td><td>GAP</td><td>PILATES</td><td>GAP</td><td>ZUMBA</td><td>SPINNING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalPilates">PILATES</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalGap">GAP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalPilates">PILATES</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalGap">GAP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalZumba">ZUMBA</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalSpinning">SPINNING</td>
                         </tr>
                         <tr>
                             <td>11:00</td>
-                            <td>BODY PUMP</td><td>TRX</td><td>BODY PUMP</td><td>TRX</td><td>YOGA</td><td>PILATES</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalTrx">TRX</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalTrx">TRX</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalYoga">YOGA</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalPilates">PILATES</td>
                         </tr>
                         <tr>
                             <td>14:00</td>
-                            <td>CROSS TRAINING</td><td></td><td>CROSS TRAINING</td><td></td><td>CROSS TRAINING</td><td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>18:00</td>
-                            <td>BOXEO</td><td>SPINNING</td><td>BOXEO</td><td>SPINNING</td><td>BODY PUMP</td><td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBoxeo">BOXEO</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalSpinning">SPINNING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBoxeo">BOXEO</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalSpinning">SPINNING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>19:00</td>
-                            <td>BODY PUMP</td><td>CROSS TRAINING</td><td>BODY PUMP</td><td>CROSS TRAINING</td><td>ZUMBA</td><td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalBodyPump">BODY PUMP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalCross">CROSS TRAINING</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalZumba">ZUMBA</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>20:00</td>
-                            <td>GAP</td><td>PILATES</td><td>TRX</td><td>PILATES</td><td>YOGA</td><td></td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalGap">GAP</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalPilates">PILATES</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalTrx">TRX</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalPilates">PILATES</td>
+                            <td class="celda-interactiva" data-bs-toggle="modal" data-bs-target="#modalYoga">YOGA</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
@@ -509,6 +558,177 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal fade" id="modalSpinning" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">SPINNING</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Entrenamiento cardiovascular de alta intensidad sobre bicicleta estática. Mejora tu resistencia y tonifica tus piernas al ritmo de la música.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Alta</li>
+                        <li><strong>Duración:</strong> 45 min</li>
+                        <li><strong>Quema:</strong> ~500 kcal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCross" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">CROSS TRAINING</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Sesiones funcionales que combinan halterofilia, gimnasia y cardio. Prepárate para sudar y superar tus propios límites diarios.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Muy Alta</li>
+                        <li><strong>Duración:</strong> 60 min</li>
+                        <li><strong>Enfoque:</strong> Fuerza y Resistencia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalYoga" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">YOGA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Conecta cuerpo y mente mediante asanas y técnicas de respiración. Ideal para mejorar tu flexibilidad, postura y reducir el estrés.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Baja/Media</li>
+                        <li><strong>Duración:</strong> 60 min</li>
+                        <li><strong>Enfoque:</strong> Flexibilidad y Relax</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalPilates" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">PILATES</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Fortalece tu "core" (abdomen y lumbares) con movimientos controlados. Mejora la alineación corporal y previene lesiones.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Media</li>
+                        <li><strong>Duración:</strong> 50 min</li>
+                        <li><strong>Enfoque:</strong> Core y Postura</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalGap" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">G.A.P.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Glúteos, Abdomen y Piernas. Una clase localizada y exigente diseñada específicamente para tonificar el tren inferior de tu cuerpo.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Media/Alta</li>
+                        <li><strong>Duración:</strong> 45 min</li>
+                        <li><strong>Enfoque:</strong> Tonificación Localizada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalZumba" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">ZUMBA</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¡Entrena bailando! Coreografías divertidas con ritmos latinos y urbanos. La forma más entretenida de hacer cardio continuo.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Media</li>
+                        <li><strong>Duración:</strong> 50 min</li>
+                        <li><strong>Quema:</strong> ~400 kcal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBodyPump" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">BODY PUMP</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Clase con barras y discos al ritmo de la música. Trabaja todos los grupos musculares mayores con repeticiones altas y peso moderado.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Alta</li>
+                        <li><strong>Duración:</strong> 55 min</li>
+                        <li><strong>Enfoque:</strong> Resistencia Muscular</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalTrx" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">TRX</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Entrenamiento en suspensión aprovechando tu propio peso corporal. Desarrolla fuerza, equilibrio, flexibilidad y estabilidad del core a la vez.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Media/Alta</li>
+                        <li><strong>Duración:</strong> 45 min</li>
+                        <li><strong>Enfoque:</strong> Fuerza Funcional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBoxeo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold font-monospace">BOXEO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aprende técnica de golpeo, esquivas y desplazamientos en sacos y paos. Excelente para liberar estrés, ganar agilidad y resistencia extrema.</p>
+                    <ul class="mb-0 text-secondary small">
+                        <li><strong>Intensidad:</strong> Muy Alta</li>
+                        <li><strong>Duración:</strong> 60 min</li>
+                        <li><strong>Enfoque:</strong> Cardio y Coordinación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
