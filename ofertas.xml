@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>IronForge Fitness - Ofertas de la Semana</title>
+    <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/</link>
+    <description>Las mejores promociones y descuentos para forjar tu mejor versión.</description>
+    <language>es-es</language>
+    
+    <item>
+      <title>¡Matrícula Gratis hasta el domingo!</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#tarifas</link>
+      <description>Apúntate esta semana a nuestro Plan VIP Anual y te regalamos el 100% de la matrícula y un batido de proteínas de bienvenida.</description>
+      <category>Suscripciones</category>
+      <category>Promociones</category>
+      <pubDate>Fri, 10 Apr 2026 09:00:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/servicio-4.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>20% de Descuento en Suplementación</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#destacados</link>
+      <description>Renueva tus reservas de Whey Protein y Creatina con un 20% de descuento enseñando tu llave inteligente en recepción.</description>
+      <category>Nutrición</category>
+      <category>Promociones</category>
+      <pubDate>Wed, 08 Apr 2026 12:30:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/servicio-3.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Trae a un amigo: 2x1 en Pase de Día</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#tarifas</link>
+      <description>Entrenar acompañado siempre es mejor. Este fin de semana paga un pase de día y tu compañero entra totalmente gratis.</description>
+      <category>Pases Temporales</category>
+      <category>Eventos Especiales</category>
+      <pubDate>Mon, 06 Apr 2026 10:15:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/carrusel-1.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+  </channel>
+</rss>

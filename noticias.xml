@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>IronForge Fitness - Últimas Noticias</title>
+    <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/</link>
+    <description>Novedades, avisos y noticias de tu gimnasio de confianza en Gran Canaria.</description>
+    <language>es-es</language>
+    
+    <item>
+      <title>Renovación de la Zona de Cross Training</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#servicios</link>
+      <description>Acabamos de instalar nuevo equipamiento en la zona de peso libre. ¡Ven a probar las nuevas barras olímpicas y discos!</description>
+      <category>Instalaciones</category>
+      <category>Novedades</category>
+      <pubDate>Thu, 09 Apr 2026 18:00:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/carrusel-2.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Nueva clase de Pilates los Sábados</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#horarios</link>
+      <description>Por petición popular, abrimos un nuevo grupo de Pilates los sábados a las 11:00. Reserva tu plaza desde la App.</description>
+      <category>Clases Dirigidas</category>
+      <category>Horarios</category>
+      <pubDate>Tue, 07 Apr 2026 09:00:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/carrusel-3.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+    <item>
+      <title>Masterclass con Entrenador Invitado</title>
+      <link>https://izanhd928.github.io/LND-IzanHernandez-UT4/#destacados</link>
+      <description>El próximo 20 de mayo contaremos con la visita de un entrenador de élite para una masterclass exclusiva de técnica de sentadilla.</description>
+      <category>Eventos Especiales</category>
+      <category>Novedades</category>
+      <pubDate>Sun, 05 Apr 2026 14:00:00 +0100</pubDate>
+      <enclosure url="https://izanhd928.github.io/LND-IzanHernandez-UT4/img/servicio-1.jpg" length="50000" type="image/jpeg" />
+    </item>
+
+  </channel>
+</rss>
